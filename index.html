@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brigadier Randeep Singh Chatha</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Segoe+UI&display=swap" rel="stylesheet"/>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Segoe+UI&display=swap');
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #0e0e0e;
@@ -52,24 +52,20 @@
     .section-dark {
       background-color: #1b1b1b;
     }
-    .badge {
-      margin: 5px;
-      background-color: #ffcc00;
-      color: #000;
-      font-weight: bold;
+    .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
     }
-    .timeline {
-      border-left: 3px solid #ffcc00;
-      margin-left: 20px;
-      padding-left: 20px;
+    .left-col {
+      flex: 1 1 60%;
     }
-    .timeline li {
-      margin-bottom: 15px;
+    .right-col {
+      flex: 1 1 35%;
     }
-    .card-icon {
-      font-size: 2rem;
-      margin-right: 10px;
-      color: #ffcc00;
+    .right-img {
+      max-width: 100%;
+      border-radius: 10px;
     }
     footer {
       background-color: #000;
@@ -81,12 +77,14 @@
       right: 20px;
       z-index: 1000;
     }
+    @media (max-width: 768px) {
+      .two-column {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
-<!-- Content remains unchanged -->
-
-  <!-- Transparent Header Navigation -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand text-warning fw-bold" href="#">Randeep Chatha</a>
@@ -96,18 +94,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#appointments">Appointments</a></li>
-          <li class="nav-item"><a class="nav-link" href="#competencies">Competencies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-          <li class="nav-item"><a class="nav-link" href="#retirement">Post-Retirement</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
   <header class="hero" data-aos="fade-in">
     <div class="container">
       <h1 class="display-3 fw-bold">Brigadier Randeep Singh Chatha</h1>
@@ -116,86 +112,88 @@
     </div>
   </header>
 
-  <!-- About -->
   <section class="section-dark" id="about">
     <div class="container" data-aos="fade-up">
       <h2 class="section-title">About</h2>
-      <p class="lead text-white">Retired Brigadier from Indian Army’s elite Corps of Army Air Defence with 33 years of decorated service in defense strategy, crisis management, military training, and veteran resettlement. Now seeking impactful roles in corporate security, consulting, and leadership.</p>
+      <p class="lead text-white">Retired Brigadier from Indian Army’s elite Corps of Army Air Defence with 33 years of decorated service. Specialized in strategic leadership, crisis management, veteran welfare, and air defense modernization.</p>
     </div>
   </section>
 
-  <!-- Appointments Timeline -->
-  <section class="section-dark" id="appointments">
-    <div class="container" data-aos="fade-right">
-      <h2 class="section-title">Key Appointments</h2>
-      <ul class="timeline text-white">
-        <li><strong>2024–2025:</strong> ADG, Directorate of Resettlement</li>
-        <li><strong>2022–2024:</strong> Senior Instructor, Army War College</li>
-        <li><strong>2020:</strong> Brigade Commander, Air Defence Brigade</li>
-        <li><strong>2018–2019:</strong> Director Recruiting, Army Recruiting Office</li>
-        <li><strong>2000–2003:</strong> Instructor, Army Air Defence College</li>
-      </ul>
-    </div>
-  </section>
+  <section class="section-dark" id="experience">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Professional Experience</h2>
 
-  <!-- Competencies -->
-  <section class="section-dark" id="competencies">
-    <div class="container" data-aos="zoom-in">
-      <h2 class="section-title">Core Competencies</h2>
-      <div class="row text-center">
-        <div class="col-md-4"><i class="fas fa-chess-king card-icon"></i> Strategic Leadership</div>
-        <div class="col-md-4"><i class="fas fa-radar card-icon"></i> Air Defence Operations</div>
-        <div class="col-md-4"><i class="fas fa-fire-extinguisher card-icon"></i> Crisis Management</div>
-        <div class="col-md-4"><i class="fas fa-chalkboard-teacher card-icon"></i> Training Design</div>
-        <div class="col-md-4"><i class="fas fa-tools card-icon"></i> Defense Modernization</div>
-        <div class="col-md-4"><i class="fas fa-globe card-icon"></i> Military Diplomacy</div>
+      <div class="two-column">
+        <div class="left-col">
+          <h4>Brigade Commander, Air Defence Brigade</h4>
+          <ul>
+            <li>Commanded over 3000 troops in strategic air defense ops.</li>
+            <li>Led brigade-level training, drills, and live firing exercises.</li>
+            <li>Managed logistics, procurement, and high-level planning.</li>
+          </ul>
+        </div>
+        <div class="right-col">
+          <img src="akash_missiles.jpg" class="right-img" alt="Air Defence Launcher">
+        </div>
+      </div>
+
+      <hr class="my-5" style="border-color: #ffcc00"/>
+
+      <div class="two-column">
+        <div class="left-col">
+          <h4>ADG, Directorate of Resettlement</h4>
+          <ul>
+            <li>Designed resettlement plans for retiring servicemen.</li>
+            <li>Partnered with corporate & govt. sectors for job placements.</li>
+            <li>Standardized training programs for veterans across India.</li>
+          </ul>
+        </div>
+        <div class="right-col">
+          <img src="disabled-war-veterans-organisation-writes-to-army-over-disability-pension-issue.jpg" class="right-img" alt="Army Veterans">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
   <section class="section-dark" id="education">
-    <div class="container" data-aos="fade-left">
-      <h2 class="section-title">Education & Courses</h2>
-      <div class="row">
-        <div class="col-md-6">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Education & Training</h2>
+      <div class="two-column">
+        <div class="left-col">
           <ul>
             <li>MSc in Defense & Strategic Studies – Madras University</li>
             <li>PGDBM – Guru Nanak Dev University</li>
+            <li>Staff College – DSSC Wellington</li>
+            <li>Long Gunnery Staff Course – Army Air Defence College</li>
           </ul>
         </div>
-        <div class="col-md-6">
-          <ul>
-            <li>Defense Services Staff College – DSSC Wellington</li>
-            <li>Long Gunnery Staff Course – Air Defence College</li>
-          </ul>
+        <div class="right-col">
+          <img src="indian-army-training-cadet-demonstrates-her-skills-440nw-14087892f.jpg" class="right-img" alt="Training">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Awards -->
   <section class="section-dark" id="awards">
     <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Awards & Operations</h2>
-      <ul class="text-white">
-        <li>Operation Meghdoot – Siachen Glacier</li>
-        <li>Operation Rakshak – J&K</li>
-        <li>Army Commander’s Commendation</li>
-        <li>High Altitude Service Medal</li>
-      </ul>
+      <h2 class="section-title">Awards & Honors</h2>
+      <div class="two-column">
+        <div class="left-col">
+          <ul>
+            <li>Operation Meghdoot – Siachen Glacier Deployment</li>
+            <li>Operation Rakshak – J&K</li>
+            <li>Operation Parakram – Mobilization (J&K)</li>
+            <li>High Altitude Service Medal</li>
+            <li>Army Commander’s Commendation Card</li>
+          </ul>
+        </div>
+        <div class="right-col">
+          <img src="Siachen-glacier-medal.png" class="right-img" alt="Army Medals">
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Post-Retirement -->
-  <section class="section-dark" id="retirement">
-    <div class="container" data-aos="zoom-in-up">
-      <h2 class="section-title">Post-Retirement Roles</h2>
-      <p class="lead text-white">Available for advisory, consulting, or board-level roles in defense, aerospace, corporate security, and strategy. Open to relocation and travel as required.</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
   <section class="section-dark" id="contact">
     <div class="container" data-aos="fade-up">
       <h2 class="section-title">Contact</h2>
@@ -209,13 +207,10 @@
     &copy; 2025 Brigadier Randeep Singh Chatha | Designed by [Your Name]
   </footer>
 
-  <!-- Floating Button -->
   <a href="https://wa.me/917589210106" class="btn btn-warning rounded-circle floating-btn"><i class="fab fa-whatsapp"></i></a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
