@@ -3,67 +3,247 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogs - Brigadier Randeep Singh Chatha</title>
+  <title>Defense Insights - Brigadier Randeep Singh Chatha</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { background-color: #0e0e0e; color: #f1f1f1; font-family: 'Segoe UI', sans-serif; }
-    .card { background-color: #1b1b1b; border: none; transition: transform 0.3s ease; }
-    .card:hover { transform: translateY(-5px); }
-    .card-title { color: #ffcc00; }
-    .card-text { color: #ccc; }
-    .nav-link, .navbar-brand { color: #fff; }
-    .nav-link:hover { color: #ffcc00; }
+    :root {
+      --primary: #ffcc00;
+      --secondary: #0e0e0e;
+      --accent: #b22222;
+      --light: #f8f9fa;
+      --dark: #1b1b1b;
+    }
+    body { 
+      background-color: var(--secondary); 
+      color: var(--light); 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: linear-gradient(rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.9)), url('military-pattern.png');
+      background-attachment: fixed;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+      border-bottom: 2px solid var(--primary);
+    }
+    .hero-banner {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('indian-army-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 5rem 0;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background-color: var(--dark);
+      border: 1px solid #333;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      height: 100%;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      border-color: var(--primary);
+    }
+    .card-img-top {
+      border-radius: 10px 10px 0 0;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--primary);
+    }
+    .card-title { 
+      color: var(--primary);
+      font-weight: 700;
+      min-height: 60px;
+    }
+    .card-text { color: #aaa; }
+    .btn-outline-warning {
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+    .btn-outline-warning:hover {
+      background-color: var(--primary);
+      color: var(--dark);
+    }
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background: var(--primary);
+      bottom: -10px;
+      left: 0;
+    }
+    .category-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--accent);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .read-time {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    .author-info {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .author-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 2px solid var(--primary);
+    }
+    .footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 2rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid #333;
+    }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Randeep Chatha</a>
-      <div class="collapse navbar-collapse">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-shield-alt me-2"></i>Brig. Randeep Chatha
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Blogs</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <div class="hero-banner text-center text-white">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Defense Insights</h1>
+      <p class="lead">Expert analysis on Indian military affairs, strategy, and modernization</p>
+    </div>
+  </div>
+
   <div class="container py-5">
-    <h1 class="text-center text-warning mb-5">Military Insight Blogs</h1>
+    <h2 class="text-center text-warning mb-5 section-title">Latest Articles</h2>
     <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="ewfwe_202204131437500960_H@@IGHT_420_W@@IDTH_802_202404131047050121_H@@IGHT_420_W@@IDTH_802.png" class="card-img-top" alt="Siachen">
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <img src="ewfwe_202204131437500960_H@@IGHT_420_W@@IDTH_802_202404131047050121_H@@IGHT_420_W@@IDTH_802.png" class="card-img-top" alt="Siachen Glacier">
+          <span class="category-badge">Frontline</span>
           <div class="card-body">
-            <h5 class="card-title">Life on the Siachen Glacier</h5>
-            <p class="card-text">Explore the extreme challenges and bravery of soldiers serving in the world's highest battlefield.</p>
-            <a href="blog-siachen.html" class="btn btn-outline-warning">Read More</a>
+            <h5 class="card-title">Life on the Siachen Glacier: The Ultimate Test of Human Endurance</h5>
+            <p class="card-text">An in-depth look at the daily challenges faced by soldiers stationed at the world's highest battlefield, where temperatures plunge to -60°C.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="read-time"><i class="far fa-clock me-1"></i> 8 min read</span>
+              <a href="blog-siachen.html" class="btn btn-outline-warning">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+            <div class="author-info">
+              
+              <div>
+                <small class="d-block">Brig. Randeep Chatha</small>
+            
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="indian-army-marks-4-decades-of-presence-in-siachen-glacier.jpg" class="card-img-top" alt="Modern Army">
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <img src="indian-army-marks-4-decades-of-presence-in-siachen-glacier.jpg" class="card-img-top" alt="Indian Army Modernization">
+          <span class="category-badge">Technology</span>
           <div class="card-body">
-            <h5 class="card-title">Indian Army Modernization</h5>
-            <p class="card-text">A deep dive into the technological and structural upgrades driving the modern Indian Army.</p>
-            <a href="blog-modernization.html" class="btn btn-outline-warning">Read More</a>
+            <h5 class="card-title">Indian Armed Forces Modernization: The Road to 2030</h5>
+            <p class="card-text">Examining the comprehensive modernization program transforming India's defense capabilities with cutting-edge technology and indigenous solutions.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="read-time"><i class="far fa-clock me-1"></i> 10 min read</span>
+              <a href="blog-modernization.html" class="btn btn-outline-warning">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+            <div class="author-info">
+              <div>
+                <small class="d-block">Brig. Randeep Chatha</small>
+               
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="Womens in armed Forces.jpg" class="card-img-top" alt="Women in Forces">
+      <div class="col-lg-4 col-md-6">
+        <div class="card">
+          <img src="Womens in armed Forces.jpg" class="card-img-top" alt="Women in Indian Armed Forces">
+          <span class="category-badge">Leadership</span>
           <div class="card-body">
-            <h5 class="card-title">Women in the Armed Forces</h5>
-            <p class="card-text">Celebrating the role and rise of women in the Indian armed forces, past to present.</p>
-            <a href="blog-women.html" class="btn btn-outline-warning">Read More</a>
+            <h5 class="card-title">Breaking Barriers: The Rise of Women in the Indian Armed Forces</h5>
+            <p class="card-text">Celebrating the trailblazing women officers who are redefining combat roles and leadership in India's military establishment.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="read-time"><i class="far fa-clock me-1"></i> 7 min read</span>
+              <a href="blog-women.html" class="btn btn-outline-warning">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+            <div class="author-info">
+              <div>
+                <small class="d-block">Brig. Randeep Chatha</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <h3 class="text-warning mb-4">More Defense Topics</h3>
+      <div class="row g-4">
+        <div class="col-md-3 col-6">
+          <div class="bg-dark p-3 rounded border border-secondary h-100">
+            <i class="fas fa-fighter-jet fa-2x text-warning mb-2"></i>
+            <h6>Air Power</h6>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="bg-dark p-3 rounded border border-secondary h-100">
+            <i class="fas fa-ship fa-2x text-warning mb-2"></i>
+            <h6>Naval Strategy</h6>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="bg-dark p-3 rounded border border-secondary h-100">
+            <i class="fas fa-robot fa-2x text-warning mb-2"></i>
+            <h6>AI in Defense</h6>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="bg-dark p-3 rounded border border-secondary h-100">
+            <i class="fas fa-medal fa-2x text-warning mb-2"></i>
+            <h6>Gallantry Awards</h6>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <footer class="footer text-center">
+    <div class="container">
+      
+      <p class="mb-0">&copy; 2025 Brigadier Randeep Singh Chatha. All rights reserved.</p>
+      <p class="text-muted small mt-2">The views expressed are personal and do not represent the official stance of the Indian Armed Forces.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

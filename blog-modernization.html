@@ -1,36 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modernizing the Indian Armed Forces</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Armed Forces Modernization | Defense Insights</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { background-color: #0e0e0e; color: #f1f1f1; font-family: 'Segoe UI', sans-serif; }
-    .container { padding: 4rem 2rem; max-width: 800px; margin: auto; }
-    h1, h2 { color: #ffcc00; }
-    a { color: #ffcc00; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { width: 100%; border-radius: 8px; margin-bottom: 1.5rem; }
+    :root {
+      --primary: #ffcc00;
+      --secondary: #0e0e0e;
+      --accent: #b22222;
+      --light: #f8f9fa;
+      --dark: #1b1b1b;
+    }
+    body { 
+      background-color: var(--secondary); 
+      color: var(--light); 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: linear-gradient(rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.9)), url('military-pattern.png');
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+      border-bottom: 2px solid var(--primary);
+    }
+    .hero-article {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('modernization-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 8rem 0 5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .article-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 2rem 0;
+      border: 3px solid var(--primary);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    .img-caption {
+      color: #aaa;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+    }
+    .tech-card {
+      background-color: rgba(255, 204, 0, 0.05);
+      border: 1px solid rgba(255, 204, 0, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .tech-card:hover {
+      background-color: rgba(255, 204, 0, 0.1);
+      border-color: var(--primary);
+      transform: translateY(-5px);
+    }
+    .tech-icon {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--primary);
+      border-left: 3px solid var(--primary);
+      padding-left: 1rem;
+      margin: 2rem 0;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 2rem 0;
+    }
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: var(--primary);
+    }
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--primary);
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+    .comparison-table th {
+      background-color: rgba(255, 204, 0, 0.1);
+      color: var(--primary);
+    }
+    .comparison-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+    .footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 2rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid #333;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Modernizing the Indian Armed Forces</h1>
-    <img src="indian-army-marks-4-decades-of-presence-in-siachen-glacier.jpg" alt="Indian Army modern tank T-90" />
-    <p><strong>Date:</strong> May 2025</p>
-    <p>The Indian Armed Forces are undergoing rapid modernization to meet future challenges. This includes procurement of advanced weapon systems, indigenization of defense manufacturing under Make in India, and strengthening cyber and space capabilities.</p>
-    <p>Key areas of focus include:
-      <ul>
-        <li>Drone and UAV technologies</li>
-        <li>Next-gen tanks and fighter jets</li>
-        <li>Modern infantry weapons</li>
-        <li>AI and cyber warfare tools</li>
-      </ul>
-    </p>
-    <p>Investments in artificial intelligence and space-based surveillance systems are transforming India's defense landscape. Collaboration with domestic startups and international partners is accelerating indigenous technology development.</p>
-    <p>These modernization efforts are vital to maintain strategic advantage in a complex geopolitical environment, ensuring that the armed forces remain agile, tech-savvy, and prepared for asymmetric warfare.</p>
-    <a href="blogs.html">&larr; Back to Blogs</a>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-shield-alt me-2"></i>Brig. Randeep Chatha
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blogs.html">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-article text-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <span class="badge bg-warning text-dark mb-3">TECHNOLOGY</span>
+          <h1 class="display-4 fw-bold">Indian Armed Forces Modernization</h1>
+          <p class="lead">The Road to 2030: How Technology is Transforming India's Defense Capabilities</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="d-flex align-items-center">
+            
+            <div>
+              <div class="fw-bold">Brig. Randeep Chatha</div>
+            
+            </div>
+          </div>
+          <div>
+          
+          </div>
+        </div>
+
+        <img src="crossing-the-indus-river-v0-2wzjorq9quyd1.webp" alt="Indian Army modernization" class="article-img">
+        <p class="img-caption">Indian Army's T-90 Bhishma tanks during winter exercises</p>
+
+        <p>The Indian Armed Forces are undergoing their most comprehensive modernization since independence, driven by evolving security challenges and technological advancements. With a budget allocation of ₹5.94 lakh crore (US$72.6 billion) for 2025-26, the modernization program focuses on indigenous development, technological superiority, and multi-domain integration.</p>
+
+        <h3 class="text-warning mt-5">Pillars of Modernization</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="tech-card">
+              <div class="tech-icon">
+                <i class="fas fa-microchip"></i>
+              </div>
+              <h5>Indigenous Development</h5>
+              <p>Under the 'Make in India' initiative, domestic production now accounts for 68% of defense procurement, up from 30% in 2014. Key projects include:</p>
+              <ul>
+                <li>TEJAS MK-1A fighter jets</li>
+                <li>Arjun MK-1A tanks</li>
+                <li>INS Vikrant aircraft carrier</li>
+                <li>Prachand attack helicopters</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tech-card">
+              <div class="tech-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h5>Artificial Intelligence</h5>
+              <p>The Defense AI Council oversees 75+ AI projects including:</p>
+              <ul>
+                <li>AI-based surveillance systems</li>
+                <li>Predictive maintenance for equipment</li>
+                <li>Automated threat detection</li>
+                <li>Decision support systems</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tech-card">
+              <div class="tech-icon">
+                <i class="fas fa-satellite"></i>
+              </div>
+              <h5>Space & Cyber</h5>
+              <p>Defense Space Agency initiatives:</p>
+              <ul>
+                <li>EMISAT electronic intelligence satellite</li>
+                <li>Project Kusha missile defense system</li>
+                <li>Defense Cyber Agency with 1,000+ specialists</li>
+                <li>Quantum key distribution for secure comms</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tech-card">
+              <div class="tech-icon">
+                <i class="fas fa-drone-alt"></i>
+              </div>
+              <h5>Unmanned Systems</h5>
+              <p>Expanding drone capabilities:</p>
+              <ul>
+                <li>Rustom-2 MALE UAV</li>
+                <li>ALFA-S swarm drones</li>
+                <li>Naval autonomous vessels</li>
+                <li>Counter-drone systems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-warning mt-5">Modernization Timeline</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h5>2023-2024</h5>
+            <ul>
+              <li>Induction of S-400 missile systems</li>
+              <li>Commissioning of INS Vikrant</li>
+              <li>TEJAS MK-1A initial operational clearance</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h5>2024-2025</h5>
+            <ul>
+              <li>Project Zorawar light tanks deployment</li>
+              <li>Prachand helicopter squadrons formed</li>
+              <li>Advanced Towed Artillery Gun System (ATAGS) rollout</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h5>2025-2027</h5>
+            <ul>
+              <li>AMCA stealth fighter prototype testing</li>
+              <li>Project 75I submarine construction begins</li>
+              <li>Integrated Rocket Force establishment</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h5>2027-2030</h5>
+            <ul>
+              <li>6th gen fighter development</li>
+              <li>Hypersonic weapons deployment</li>
+              <li>Complete network-centric warfare capability</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="text-warning mt-5">Comparative Analysis</h3>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>System</th>
+              <th>Previous Generation</th>
+              <th>New System</th>
+              <th>Improvement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Main Battle Tank</td>
+              <td>T-72 (1980s)</td>
+              <td>T-90MS/Arjun MK-1A</td>
+              <td>+300% firepower, +150% protection</td>
+            </tr>
+            <tr>
+              <td>Fighter Jet</td>
+              <td>MiG-21</td>
+              <td>Rafale/TEJAS MK-1A</td>
+              <td>+500% combat radius, AESA radar</td>
+            </tr>
+            <tr>
+              <td>Infantry Gear</td>
+              <td>INSAS rifle</td>
+              <td>SIG716/SiG Sauer</td>
+              <td>+40% accuracy, modular design</td>
+            </tr>
+            <tr>
+              <td>Communication</td>
+              <td>Analog radios</td>
+              <td>Software-defined radios</td>
+              <td>Encrypted, jam-resistant</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="quote">
+          "Modernization isn't just about new equipment—it's about transforming how we think, train, and fight. The Indian Armed Forces are leapfrogging generations of technology to create a future-ready force." — Defense Analyst
+        </div>
+
+        <h3 class="text-warning mt-5">Challenges Ahead</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="tech-card bg-danger bg-opacity-10">
+              <h5>Budget Constraints</h5>
+              <p>While defense budgets have increased, they remain below 2% of GDP, limiting procurement pace. Prioritization between:</p>
+              <ul>
+                <li>Strategic weapons vs conventional forces</li>
+                <li>New acquisitions vs maintenance</li>
+                <li>Imported vs indigenous systems</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tech-card bg-danger bg-opacity-10">
+              <h5>Technology Absorption</h5>
+              <p>Integrating advanced systems requires:</p>
+              <ul>
+                <li>Specialized training programs</li>
+                <li>Revised doctrine development</li>
+                <li>Maintenance infrastructure</li>
+                <li>Inter-service coordination</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+ 
+
+        <h3 class="text-warning mt-5">The Road to 2030</h3>
+        <p>By the end of this decade, the Indian Armed Forces aim to achieve:</p>
+        <ul>
+          <li>Complete network-centric warfare capability</li>
+          <li>70% indigenous content in defense equipment</li>
+          <li>Integrated theater commands</li>
+          <li>Space-based surveillance constellation</li>
+          <li>Cyber warfare superiority</li>
+        </ul>
+
+        <p>This transformation will ensure India maintains strategic autonomy and can counter emerging threats in an increasingly complex security environment.</p>
+
+        <a href="blogs.html" class="btn btn-outline-warning mt-4"><i class="fas fa-arrow-left me-2"></i> Back to All Articles</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="mb-4">
+        
+      </div>
+      <p class="mb-0">&copy; 2025 Brigadier Randeep Singh Chatha. All rights reserved.</p>
+      <p class="text-muted small mt-2">The views expressed are personal and do not represent the official stance of the Indian Armed Forces.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

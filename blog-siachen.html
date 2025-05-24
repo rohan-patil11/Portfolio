@@ -1,30 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Life on Siachen Glacier</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life on Siachen Glacier | Defense Insights</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { background-color: #0e0e0e; color: #f1f1f1; font-family: 'Segoe UI', sans-serif; }
-    .container { padding: 4rem 2rem; max-width: 800px; margin: auto; }
-    h1, h2 { color: #ffcc00; }
-    a { color: #ffcc00; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { width: 100%; border-radius: 8px; margin-bottom: 1.5rem; }
+    :root {
+      --primary: #ffcc00;
+      --secondary: #0e0e0e;
+      --accent: #b22222;
+      --light: #f8f9fa;
+      --dark: #1b1b1b;
+    }
+    body { 
+      background-color: var(--secondary); 
+      color: var(--light); 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: linear-gradient(rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.9)), url('military-pattern.png');
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+      border-bottom: 2px solid var(--primary);
+    }
+    .hero-article {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('siachen-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 8rem 0 5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .article-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 2rem 0;
+      border: 3px solid var(--primary);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    .img-caption {
+      color: #aaa;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+    }
+    .highlight-box {
+      background-color: rgba(178, 34, 34, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--primary);
+      border-left: 3px solid var(--primary);
+      padding-left: 1rem;
+      margin: 2rem 0;
+    }
+    .back-btn {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 2rem;
+    }
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #333;
+    }
+    .author-info {
+      display: flex;
+      align-items: center;
+    }
+    .author-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+      border: 2px solid var(--primary);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      border: 2px solid #333;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+      border-color: var(--primary);
+    }
+    .footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 2rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid #333;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Life on Siachen Glacier</h1>
-    <img src="ewfwe_202204131437500960_H@@IGHT_420_W@@IDTH_802_202404131047050121_H@@IGHT_420_W@@IDTH_802.png" alt="Indian Army outpost at Siachen Glacier" />
-    <p><strong>Date:</strong> May 2025</p>
-    <p>The Siachen Glacier, located at the northern tip of India, is known as the world's highest battlefield. Indian soldiers deployed here face temperatures as low as -60°C, avalanches, and thin oxygen levels while maintaining security at 18,000+ feet.</p>
-    <p>Soldiers undergo intense training before deployment, and logistics like ration, clothing, and medical support are flown in by helicopter. Despite extreme hardships, their morale and discipline remain unmatched.</p>
-    <p>Troops are rotated every 3 months, and the deployment is considered one of the toughest in the Indian Army. The glacier is strategically significant as it borders Pakistan and China.</p>
-    <p>Life here is not just about survival; it involves constant vigilance, teamwork, and innovation to overcome environmental challenges. Soldiers use specially designed equipment and shelters to combat frostbite and altitude sickness.</p>
-    <p>The human spirit's resilience on Siachen is a testament to the bravery and dedication of Indian soldiers who protect the nation's sovereignty in the harshest conditions on earth.</p>
-    <a href="blogs.html">&larr; Back to Blogs</a>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-shield-alt me-2"></i>Brig. Randeep Chatha
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blogs.html">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-article text-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <span class="badge bg-danger mb-3">FRONTLINE REPORT</span>
+          <h1 class="display-4 fw-bold">Life on the Siachen Glacier</h1>
+          <p class="lead">The Ultimate Test of Human Endurance at the World's Highest Battlefield</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="article-meta">
+          <div class="author-info">
+            <div>
+              <div class="fw-bold">Brig. Randeep Chatha</div>
+            </div>
+          </div>
+        </div>
+
+        <img src="ewfwe_202204131437500960_H@@IGHT_420_W@@IDTH_802_202404131047050121_H@@IGHT_420_W@@IDTH_802.png" alt="Indian Army soldiers at Siachen Glacier" class="article-img">
+        <p class="img-caption">Indian Army soldiers conduct patrol at 18,000 feet on the Siachen Glacier</p>
+
+        <p>The Siachen Glacier, located at the northern tip of India in the Karakoram Range, is not just another military posting—it's a test of human endurance unlike any other on the planet. At altitudes exceeding 18,000 feet (5,500 meters), with temperatures plunging to -60°C (-76°F) and oxygen levels at just 10% of sea level, this 78km-long glacier is the world's highest battlefield.</p>
+
+        <div class="highlight-box">
+          <h4 class="text-warning">Key Facts About Siachen</h4>
+          <ul>
+            <li>Average altitude: 17,000-20,000 feet</li>
+            <li>Temperature range: -25°C to -60°C</li>
+            <li>Annual snowfall: 35 feet (10.6 meters)</li>
+            <li>Wind speeds: Up to 100 km/h</li>
+            <li>Indian Army deployment since: April 13, 1984 (Operation Meghdoot)</li>
+          </ul>
+        </div>
+
+        <h3 class="text-warning mt-5">The Human Challenge</h3>
+        <p>Soldiers selected for Siachen deployment undergo a rigorous 14-day acclimatization process at base camps before ascending to their posts. The human body at these altitudes faces multiple challenges:</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Physical Effects:</h5>
+            <ul>
+              <li>High Altitude Pulmonary Edema (HAPE)</li>
+              <li>High Altitude Cerebral Edema (HACE)</li>
+              <li>Severe frostbite risks</li>
+              <li>Weight loss (avg. 10-15kg in 3 months)</li>
+              <li>Sleep disorders</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Psychological Effects:</h5>
+            <ul>
+              <li>Isolation and loneliness</li>
+              <li>White-out conditions causing disorientation</li>
+              <li>Chronic fatigue syndrome</li>
+              <li>Memory impairment</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="quote">
+          "Every breath at Siachen is a battle, every step a victory. The glacier doesn't discriminate—it tests officers and jawans equally, and only the toughest prevail." — Colonel who served three Siachen tenures
+        </div>
+
+        <h3 class="text-warning mt-5">Daily Life on the Glacier</h3>
+        <p>A typical day begins before dawn, with soldiers checking each other for signs of frostbite or altitude sickness. Morning briefings are conducted in heated shelters, where commanders review:</p>
+        <ul>
+          <li>Weather forecasts (avalanche risks are constant)</li>
+          <li>Patrol schedules</li>
+          <li>Equipment status (weapons must be kept ice-free)</li>
+          <li>Health status of all personnel</li>
+        </ul>
+
+       
+
+        <h4 class="mt-4">Innovations for Survival</h4>
+        <p>The Indian Army has developed specialized equipment for Siachen operations:</p>
+        <ul>
+          <li><strong>Clothing:</strong> 12-layer attire including heated gloves and boots</li>
+          <li><strong>Diet:</strong> 5000+ calorie meals with special high-altitude rations</li>
+          <li><strong>Shelters:</strong> Insulated fiberglass huts with oxygen concentrators</li>
+          <li><strong>Transport:</strong> Cheetah helicopters with high-altitude modifications</li>
+        </ul>
+
+        <div class="gallery">
+        
+        </div>
+
+        <h3 class="text-warning mt-5">Strategic Importance</h3>
+        <p>Siachen's strategic value cannot be overstated:</p>
+        <ol>
+          <li>Controls the Saltoro Ridge, preventing Pakistani or Chinese advancement</li>
+          <li>Acts as a buffer between Pakistan-occupied Kashmir and China</li>
+          <li>Provides early warning capability for any northern threats</li>
+          <li>Maintains India's dominance in the Karakoram Range</li>
+        </ol>
+
+        <div class="highlight-box">
+          <h4 class="text-warning">Siachen by the Numbers</h4>
+          <div class="row text-center">
+            <div class="col-md-3">
+              <div class="display-6 text-warning">900+</div>
+              <div class="small">Soldiers deployed at any time</div>
+            </div>
+            <div class="col-md-3">
+              <div class="display-6 text-warning">3</div>
+              <div class="small">Month average rotation</div>
+            </div>
+            <div class="col-md-3">
+              <div class="display-6 text-warning">35</div>
+              <div class="small">Forward posts maintained</div>
+            </div>
+            <div class="col-md-3">
+              <div class="display-6 text-warning">2.5cr</div>
+              <div class="small">Daily cost (INR) of operations</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-warning mt-5">The Human Spirit</h3>
+        <p>Despite the extreme conditions, morale remains remarkably high. Soldiers have developed unique traditions:</p>
+        <ul>
+          <li>Celebrating "Siachen Day" on April 13th</li>
+          <li>Maintaining the highest altitude cricket ground</li>
+          <li>Writing messages on ice walls for incoming troops</li>
+          <li>Special "victory rituals" after completing tenure</li>
+        </ul>
+
+        <p>The Indian Army's Siachen Warriors represent the pinnacle of military endurance. Their sacrifice and resilience in defending this frozen frontier is a testament to the extraordinary capabilities of India's armed forces.</p>
+
+        <a href="blogs.html" class="back-btn"><i class="fas fa-arrow-left me-2"></i> Back to All Articles</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="mb-4">
+        
+      </div>
+      <p class="mb-0">&copy; 2025 Brigadier Randeep Singh Chatha. All rights reserved.</p>
+      <p class="text-muted small mt-2">The views expressed are personal and do not represent the official stance of the Indian Armed Forces.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

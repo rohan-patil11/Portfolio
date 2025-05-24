@@ -1,35 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Women in the Indian Armed Forces</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Women in Indian Armed Forces | Defense Insights</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body { background-color: #0e0e0e; color: #f1f1f1; font-family: 'Segoe UI', sans-serif; }
-    .container { padding: 4rem 2rem; max-width: 800px; margin: auto; }
-    h1, h2 { color: #ffcc00; }
-    a { color: #ffcc00; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    img { width: 100%; border-radius: 8px; margin-bottom: 1.5rem; }
+    :root {
+      --primary: #ffcc00;
+      --secondary: #0e0e0e;
+      --accent: #b22222;
+      --light: #f8f9fa;
+      --dark: #1b1b1b;
+    }
+    body { 
+      background-color: var(--secondary); 
+      color: var(--light); 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: linear-gradient(rgba(14, 14, 14, 0.9), rgba(14, 14, 14, 0.9)), url('military-pattern.png');
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+      border-bottom: 2px solid var(--primary);
+    }
+    .hero-article {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('women-forces-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 8rem 0 5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .article-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 2rem 0;
+      border: 3px solid var(--primary);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    .img-caption {
+      color: #aaa;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+    }
+    .milestone-card {
+      background-color: rgba(178, 34, 34, 0.1);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--accent);
+    }
+    .profile-card {
+      background-color: rgba(255, 204, 0, 0.05);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      margin: 0 auto 1rem;
+      display: block;
+    }
+    .quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--primary);
+      border-left: 3px solid var(--primary);
+      padding-left: 1rem;
+      margin: 2rem 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .stat-item {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 2rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid #333;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Women in the Indian Armed Forces</h1>
-    <img src="Womens in armed Forces.jpg" alt="Women officers in Indian Army" />
-    <p><strong>Date:</strong> May 2025</p>
-    <p>Women have been breaking barriers in the Indian Armed Forces across the Army, Navy, and Air Force. From flying fighter jets to serving in the Siachen base camp, women are increasingly taking on frontline roles.</p>
-    <p>Recent milestones include:
-      <ul>
-        <li>Permanent commission for women officers</li>
-        <li>First woman commanding a naval ship</li>
-        <li>Entry into NDA for aspiring women cadets</li>
-      </ul>
-    </p>
-    <p>Beyond combat roles, women officers have excelled in intelligence, logistics, and strategic planning. Their contributions have not only improved operational effectiveness but also inspired a new generation of young women to consider careers in defense.</p>
-    <p>The Indian military continues to foster inclusivity, leadership, and equal opportunity across ranks, signaling progressive change in a traditionally male-dominated sector.</p>
-    <a href="blogs.html">&larr; Back to Blogs</a>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fas fa-shield-alt me-2"></i>Brig. Randeep Chatha
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blogs.html">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-article text-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <span class="badge bg-primary mb-3">LEADERSHIP</span>
+          <h1 class="display-4 fw-bold">Breaking Barriers</h1>
+          <p class="lead">The Rise of Women in the Indian Armed Forces</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="d-flex align-items-center">
+            
+            <div>
+              <div class="fw-bold">Brig. Randeep Chatha</div>
+             
+            </div>
+          </div>
+          <div>
+           
+          </div>
+        </div>
+
+        <img src="Womens in armed Forces.jpg" alt="Women officers in Indian Armed Forces" class="article-img">
+        <p class="img-caption">Women officers from the Army, Navy and Air Force during a joint training exercise</p>
+
+        <p>The Indian Armed Forces have witnessed a remarkable transformation in gender inclusion over the past decade. From being restricted to medical and support roles, women now serve in combat positions, fly fighter jets, command warships, and are being considered for elite special forces roles. This journey reflects both societal change and military pragmatism in utilizing the nation's complete human potential.</p>
+
+        <div class="milestone-card">
+          <h4 class="text-warning">Historic Milestones</h4>
+          <ul>
+            <li><strong>1992:</strong> First batch of women commissioned in non-medical roles</li>
+            <li><strong>2015:</strong> IAF inducts first women fighter pilots</li>
+            <li><strong>2019:</strong> Army begins inducting women in military police</li>
+            <li><strong>2020:</strong> Supreme Court grants permanent commission to women officers</li>
+            <li><strong>2021:</strong> First woman commanding officer of a naval ship</li>
+            <li><strong>2022:</strong> NDA opens doors to women cadets</li>
+            <li><strong>2024:</strong> First woman officer completes Special Forces training</li>
+          </ul>
+        </div>
+
+        <h3 class="text-warning mt-5">By the Numbers</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">1,700+</div>
+            <div>Women Officers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">94</div>
+            <div>Women Fighter Pilots</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">28</div>
+            <div>Warships with Women Commanding Officers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5</div>
+            <div>Women Awarded Shaurya Chakra</div>
+          </div>
+        </div>
+
+        <div class="quote">
+          "The armed forces don't see gender, they see capability. When given equal opportunities, women have proven they can excel in any role from flying jets to leading troops in high-altitude warfare." — Wing Commander (Retd.) Anupama Joshi
+        </div>
+
+        <h3 class="text-warning mt-5">Trailblazers in Uniform</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="profile-card">
+              <img src="Bhawana Kanth.jpg" alt="Flight Lt. Bhawana Kanth" class="profile-img">
+              <h5 class="text-center">Flight Lt. Bhawana Kanth</h5>
+              <p class="text-center">One of India's first women fighter pilots, qualified to fly MiG-21 Bison jets. Completed night flying qualifications and participated in major air exercises.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="profile-card">
+              <img src="Commander Prerna Deosthalee.jpg" alt="Commander Prerna Deosthalee" class="profile-img">
+              <h5 class="text-center">Commander Prerna Deosthalee</h5>
+              <p class="text-center">First woman to command an Indian naval warship, INS Trinkat. Pioneered the way for women in naval operational roles.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="profile-card">
+              <img src="Colonel Sophia Qureshi.webp" alt="Colonel Sophia Qureshi" class="profile-img">
+              <h5 class="text-center">Colonel Sophia Qureshi</h5>
+              <p class="text-center">First woman to lead an Indian Army contingent in a foreign country during a UN peacekeeping mission in South Sudan.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="profile-card">
+              <img src="Major Priya Sharma" alt="Major Priya Sharma" class="profile-img">
+              <h5 class="text-center">Major Priya Sharma*</h5>
+              <p class="text-center">First woman officer to complete the grueling Special Forces training (name changed for security reasons).</p>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <h3 class="text-warning mt-5">Challenges & The Way Forward</h3>
+        <p>While progress has been significant, challenges remain in achieving full gender integration:</p>
+        <ul>
+          <li><strong>Infrastructure:</strong> Creating gender-appropriate facilities in forward areas</li>
+          <li><strong>Cultural Change:</strong> Overcoming traditional mindsets in some units</li>
+          <li><strong>Career Progression:</strong> Ensuring equal opportunities for command positions</li>
+          <li><strong>Work-Life Balance:</strong> Addressing unique challenges faced by women in uniform</li>
+        </ul>
+
+        <p>The armed forces are addressing these through policy changes, mentorship programs, and leadership initiatives. The goal is to create an environment where capability, not gender, determines a soldier's career path.</p>
+
+        <div class="milestone-card">
+          <h4 class="text-warning">Future Initiatives</h4>
+          <ul>
+            <li>Expanding combat roles across all services</li>
+            <li>Increasing women's representation to 20% by 2030</li>
+            <li>Establishing women's leadership academies</li>
+            <li>Developing gender-neutral physical standards</li>
+            <li>Creating support networks for women veterans</li>
+          </ul>
+        </div>
+
+        <p>The increasing participation of women in the Indian Armed Forces strengthens our national security while setting an example for society. Their courage and professionalism continue to inspire future generations of young girls to consider careers in defense.</p>
+
+        <a href="blogs.html" class="btn btn-outline-warning mt-4"><i class="fas fa-arrow-left me-2"></i> Back to All Articles</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="mb-4">
+       
+      </div>
+      <p class="mb-0">&copy; 2025 Brigadier Randeep Singh Chatha. All rights reserved.</p>
+      <p class="text-muted small mt-2">The views expressed are personal and do not represent the official stance of the Indian Armed Forces.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
