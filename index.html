@@ -77,6 +77,46 @@
       right: 20px;
       z-index: 1000;
     }
+    .timeline {
+      position: relative;
+      padding-left: 50px;
+    }
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #ffcc00;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: -40px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #ffcc00;
+    }
+    .timeline-date {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+    .competency-badge {
+      display: inline-block;
+      background: rgba(255, 204, 0, 0.2);
+      color: #ffcc00;
+      padding: 5px 15px;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 0.9rem;
+    }
     @media (max-width: 768px) {
       .two-column {
         flex-direction: column;
@@ -95,10 +135,12 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#competencies">Competencies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
         </ul>
       </div>
     </div>
@@ -108,48 +150,121 @@
     <div class="container">
       <h1 class="display-3 fw-bold">Brigadier Randeep Singh Chatha</h1>
       <p class="lead">Retired Indian Army | Air Defence Specialist | Strategic Leader</p>
+      <p class="mt-3">33 Years of Distinguished Service | Veteran Resettlement Expert</p>
       <a href="#contact" class="btn btn-outline-light btn-lg mt-4">Contact Me</a>
     </div>
   </header>
 
   <section class="section-dark" id="about">
     <div class="container" data-aos="fade-up">
-      <h2 class="section-title">About</h2>
-      <p class="lead text-white">Retired Brigadier from Indian Army’s elite Corps of Army Air Defence with 33 years of decorated service. Specialized in strategic leadership, crisis management, veteran welfare, and air defense modernization.</p>
+      <h2 class="section-title">Professional Summary</h2>
+      <div class="two-column">
+        <div class="left-col">
+          <p class="lead text-white">Highly decorated and results-driven retired Brigadier from the Indian Army's elite <strong>Corps of Army Air Defence</strong>, offering over <strong>three decades of distinguished service</strong> in defense strategy, air defense operations, cross-functional leadership, and high-level military training.</p>
+          
+          <p>Adept at leading <strong>large, multidisciplinary teams</strong> under high-stakes conditions, formulating and executing strategic defense policies, and advising senior government and military leadership. Proven record of <strong>successfully transitioning operational expertise into training, logistics, administration, and defense consulting roles</strong>, with deep domain knowledge in <strong>military modernization</strong>, <strong>crisis response</strong>, and <strong>international defense cooperation</strong>.</p>
+          
+          <p>Currently serving as <strong>Additional Director General, Directorate of Resettlement Zone (West)</strong>, facilitating the transition of retiring armed forces personnel into second careers.</p>
+        </div>
+        <div class="right-col">
+          <img src="akash_missiles.jpg" class="right-img" alt="Brigadier Randeep Singh Chatha">
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section-dark" id="experience">
     <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Professional Experience</h2>
-
-      <div class="two-column">
-        <div class="left-col">
-          <h4>Brigade Commander, Air Defence Brigade</h4>
+      <h2 class="section-title">Key Command & Staff Assignments</h2>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Brigade Commander, Air Defence Brigade (2020-2022)</h4>
+          <p class="timeline-date">2020 - 2022</p>
           <ul>
-            <li>Commanded over 3000 troops in strategic air defense ops.</li>
-            <li>Led brigade-level training, drills, and live firing exercises.</li>
-            <li>Managed logistics, procurement, and high-level planning.</li>
+            <li>Commanded over 3000 troops in strategic air defense operations</li>
+            <li>Led brigade-level training, drills, and live firing exercises</li>
+            <li>Managed logistics, procurement, and high-level planning</li>
+            <li>Coordinated with Indian Air Force and other services for joint operations</li>
           </ul>
         </div>
-        <div class="right-col">
-          <img src="akash_missiles.jpg" class="right-img" alt="Air Defence Launcher">
+        
+        <div class="timeline-item">
+          <h4>ADG, Directorate of Resettlement (2024-2025)</h4>
+          <p class="timeline-date">2024 - Present</p>
+          <ul>
+            <li>Headed zonal resettlement organization under Ministry of Defence</li>
+            <li>Developed large-scale resettlement schemes with corporate and government partners</li>
+            <li>Standardized training programs for veterans across India</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Commanding Officer, Air Defence Regiment (2009-2013)</h4>
+          <p class="timeline-date">2009 - 2013</p>
+          <ul>
+            <li>Commanded full-strength regiment with highest levels of morale and discipline</li>
+            <li>Managed entire lifecycle of sophisticated air defense weapon systems</li>
+            <li>Oversaw regimental training plans and combat-readiness programs</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Colonel Q, Category A Training Institute (2013-2015)</h4>
+          <p class="timeline-date">2013 - 2015</p>
+          <ul>
+            <li>Principal staff officer responsible for quartering, logistics and administration</li>
+            <li>Managed multi-crore annual budget for training institute</li>
+            <li>Led infrastructure projects including classrooms and accommodation</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Director Recruiting, Army Recruiting Office (2018-2019)</h4>
+          <p class="timeline-date">2018 - 2019</p>
+          <ul>
+            <li>Directed planning and execution of recruitment rallies</li>
+            <li>Implemented process improvements including digitization</li>
+            <li>Managed media outreach and public awareness campaigns</li>
+          </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-      <hr class="my-5" style="border-color: #ffcc00"/>
-
+  <section class="section-dark" id="leadership">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Leadership Experience</h2>
+      
       <div class="two-column">
         <div class="left-col">
-          <h4>ADG, Directorate of Resettlement</h4>
+          <h4>Brigade Commander Highlights</h4>
           <ul>
-            <li>Designed resettlement plans for retiring servicemen.</li>
-            <li>Partnered with corporate & govt. sectors for job placements.</li>
-            <li>Standardized training programs for veterans across India.</li>
+            <li>Planned and executed integrated air defence operations with Indian Air Force coordination</li>
+            <li>Led brigade-level operational planning, intelligence fusion, and counter-drone strategy</li>
+            <li>Directed annual training exercises and live weapon firing practices</li>
+            <li>Managed equipment lifecycle for air defence weapons systems and radars</li>
+            <li>Exercised financial powers for brigade-level budgeting and infrastructure projects</li>
+          </ul>
+          
+          <h4 class="mt-5">Regimental Command Highlights</h4>
+          <ul>
+            <li>Accountable for entire lifecycle management of sophisticated air defense systems</li>
+            <li>Ensured 100% equipment availability through proactive planning</li>
+            <li>Maintained strict financial discipline with zero critical audit observations</li>
+            <li>Played key role in disaster management and civil-military cooperation</li>
           </ul>
         </div>
         <div class="right-col">
-          <img src="disabled-war-veterans-organisation-writes-to-army-over-disability-pension-issue.jpg" class="right-img" alt="Army Veterans">
+          <img src="disabled-war-veterans-organisation-writes-to-army-over-disability-pension-issue.jpg" class="right-img" alt="Leadership">
+          
+          <h4 class="mt-5">Resettlement Leadership</h4>
+          <ul>
+            <li>Established strategic liaisons with industry associations and chambers of commerce</li>
+            <li>Introduced reforms in training curriculum to align with market requirements</li>
+            <li>Oversaw multiple zonal resettlement centers across Western India</li>
+            <li>Represented Directorate in state level conferences on veteran affairs</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -157,46 +272,114 @@
 
   <section class="section-dark" id="education">
     <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Education & Training</h2>
+      <h2 class="section-title">Education & Professional Development</h2>
       <div class="two-column">
         <div class="left-col">
+          <h4>Academic Qualifications</h4>
           <ul>
-            <li>MSc in Defense & Strategic Studies – Madras University</li>
-            <li>PGDBM – Guru Nanak Dev University</li>
-            <li>Staff College – DSSC Wellington</li>
-            <li>Long Gunnery Staff Course – Army Air Defence College</li>
+            <li><strong>Master of Science in Defense and Strategic Studies</strong> - Madras University</li>
+            <li><strong>Master of Military Sciences</strong> - Berhampur University</li>
+            <li><strong>Post Graduate Diploma in Business Management (PGDBM)</strong> - Guru Nanak Dev University</li>
+            <li><strong>Bachelor of Science</strong> - National Defence Academy (JNU)</li>
+          </ul>
+          
+          <h4 class="mt-5">Military Training</h4>
+          <ul>
+            <li><strong>Defense Services Staff College (DSSC)</strong> - Wellington</li>
+            <li><strong>Long Gunnery Staff Course (Air Defence)</strong> - Army Air Defence College</li>
+            <li>Advanced Military & Leadership Courses including crisis response and strategic communication</li>
           </ul>
         </div>
         <div class="right-col">
-          <img src="indian-army-training-cadet-demonstrates-her-skills-440nw-14087892f.jpg" class="right-img" alt="Training">
+          <img src="indian-army-training-cadet-demonstrates-her-skills-440nw-14087892f.jpg" class="right-img" alt="Education">
         </div>
       </div>
     </div>
   </section>
-
-    <!-- Existing Awards section above remains unchanged -->
 
   <section class="section-dark" id="awards">
     <div class="container" data-aos="fade-up">
       <h2 class="section-title">Awards & Honors</h2>
       <div class="two-column">
         <div class="left-col">
+          <h4>Operational Deployments</h4>
           <ul>
-            <li>Operation Meghdoot – Siachen Glacier Deployment</li>
-            <li>Operation Rakshak – J&K</li>
-            <li>Operation Parakram – Mobilization (J&K)</li>
-            <li>High Altitude Service Medal</li>
-            <li>Army Commander’s Commendation Card</li>
+            <li><strong>Operation Meghdoot</strong> - Siachen Glacier deployment</li>
+            <li><strong>Operation Rakshak</strong> - Counter-insurgency (Punjab & J&K)</li>
+            <li><strong>Operation Parakram</strong> - Mobilization and preparedness post-attack (J&K)</li>
+          </ul>
+          
+          <h4 class="mt-5">Decorations & Medals</h4>
+          <ul>
+            <li><strong>High Altitude Service Medal</strong> - Operational deployments in Eastern and Northern frontiers</li>
+            <li><strong>Army Commander's Commendation Card</strong> - Exceptional performance during IS duties (Gujar Agitation in Rajasthan)</li>
+            <li>Multiple service and tenure medals for distinguished service</li>
           </ul>
         </div>
         <div class="right-col">
-          <img src="Siachen-glacier-medal.png" class="right-img" alt="Army Medals">
+          <img src="Siachen-glacier-medal.png" class="right-img" alt="Awards">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- New Blog Section added below -->
+  <section class="section-dark" id="competencies">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Core Competencies</h2>
+      
+      <div class="text-center">
+        <span class="competency-badge">Strategic Leadership & Long-Term Planning</span>
+        <span class="competency-badge">Air Defense, Surveillance & Tactical Operations</span>
+        <span class="competency-badge">Crisis Management & High-Risk Decision-Making</span>
+        <span class="competency-badge">Training Design & Institutional Instruction</span>
+        <span class="competency-badge">Defense Systems Modernization</span>
+        <span class="competency-badge">Joint Operations & Inter-Service Coordination</span>
+        <span class="competency-badge">Policy Formulation & Defense Procurement</span>
+        <span class="competency-badge">Infrastructure & Logistics Management</span>
+        <span class="competency-badge">Financial Oversight & Budgetary Control</span>
+        <span class="competency-badge">Military Career Development</span>
+        <span class="competency-badge">International Military Diplomacy</span>
+        <span class="competency-badge">Veteran Resettlement Programs</span>
+      </div>
+      
+      <div class="mt-5">
+        <h4>Post-Retirement Career Interests</h4>
+        <div class="two-column mt-4">
+          <div class="left-col">
+            <h5>Corporate Security & Strategy</h5>
+            <ul>
+              <li>Director - Corporate Security, Business Continuity, Risk Management</li>
+              <li>Senior Consultant - Crisis Management, Policy Advisory, Governance</li>
+            </ul>
+          </div>
+          <div class="right-col">
+            <h5>Defense Technology & Consulting</h5>
+            <ul>
+              <li>Strategic Advisor - Defense Manufacturing, Equipment Modernization</li>
+              <li>Consultant - Drone Systems, Air & Missile Defense Innovation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="two-column mt-4">
+          <div class="left-col">
+            <h5>Training & Project Leadership</h5>
+            <ul>
+              <li>Director - Training & Development for Corporates or Academia</li>
+              <li>Project Head - Strategic Defense Projects or Think Tanks</li>
+            </ul>
+          </div>
+          <div class="right-col">
+            <h5>Additional Capabilities</h5>
+            <ul>
+              <li>Fluent in English, Hindi, and Punjabi</li>
+              <li>Available for consulting, advisory, or board-level positions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section-dark" id="blogs">
     <div class="container py-5" data-aos="fade-up">
       <h2 class="section-title">Military Insight Blogs</h2>
@@ -237,19 +420,30 @@
     </div>
   </section>
 
-  <!-- Continue with Contact section as before -->
   <section class="section-dark" id="contact">
     <div class="container" data-aos="fade-up">
       <h2 class="section-title">Contact</h2>
-      <p><strong>📍 Address:</strong> House No. 12, Sector A, Chandimandir Cantonment, Panchkula – 134107</p>
-      <p><strong>📞 Phone:</strong> +91 75892 10106</p>
-      <p><strong>📧 Email:</strong> (add email address here)</p>
+      <div class="two-column">
+        <div class="left-col">
+          <p><strong>📍 Address:</strong> House No. 12, Sector A, Chandimandir Cantonment, Panchkula – 134107</p>
+          <p><strong>📞 Phone:</strong> +91 75892 10106</p>
+          <p><strong>📧 Email:</strong> [Your Email Address]</p>
+          <p><strong>Current Appointment:</strong> Additional Director General, Directorate of Resettlement Zone (West)</p>
+        </div>
+        <div class="right-col">
+          <h4>Availability</h4>
+          <ul>
+            <li>Available for consulting, advisory, or board-level positions</li>
+            <li>Open to strategic defense projects and leadership roles</li>
+            <li>Willing to relocate or travel as per role requirements</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-
   <footer class="text-center py-3">
-    &copy; 2025 Brigadier Randeep Singh Chatha | Designed by [Your Name]
+    &copy; 2025 Brigadier Randeep Singh Chatha | Designed with Honor
   </footer>
 
   <a href="https://wa.me/917589210106" class="btn btn-warning rounded-circle floating-btn"><i class="fab fa-whatsapp"></i></a>
